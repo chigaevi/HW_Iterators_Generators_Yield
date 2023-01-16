@@ -28,7 +28,7 @@ def test_2():
     ):
 
         assert flat_iterator_item == check_item
-    
+
     list_of_lists_1 = [
         ['a', 'b', 'c'],
         ['d', 'e', 'f', 'h', False],

@@ -9,14 +9,6 @@ class FlatIterator:
         return self
 
     def __next__(self):
-        # if len(self.raw_list) == self.i:
-        #     raise StopIteration
-        # item_list = self.raw_list[self.i]
-        # if len(item_list) >= 1:
-        #     item = item_list.pop(0)
-        #     return item
-        # else:
-        #     self.i += 1
         if len(self.raw_list) == self.irl:
             raise StopIteration
         item_list = self.raw_list[self.irl]
@@ -26,8 +18,8 @@ class FlatIterator:
         else:
             self.irl += 1
             self.iil = 0
-
         return item
+
 
 def flat_generator(raw_list):
     i = 0
@@ -40,5 +32,4 @@ def flat_generator(raw_list):
             yield item
         else:
             i += 1
-
 
